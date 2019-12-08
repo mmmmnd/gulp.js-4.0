@@ -75,7 +75,8 @@ gulp.task('default', async () => {
 ### 4.项目配置
 * #### 1.引入插件
 
-    ```npm i  
+    ```
+    npm i  
     @babel/core gulp-watch autoprefixer del gulp gulp-babel gulp-clean-css gulp-concat gulp-connect gulp-eslint gulp-htmlmin gulp-if gulp-imagemin gulp-postcss gulp-rev gulp-rev-replace gulp-sass gulp-uglify gulp-useref postcss-px-to-viewport postcss-viewport-units
     --save-dev
     ```
