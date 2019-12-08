@@ -15,7 +15,7 @@
 > 串行执行任务
 > * gulp.parallel(task1, task2, task3) (gulp4新增) 
 > 并行执行任务
-
+> 
 > [具体可以参考gulp官网api](https://www.gulpjs.com.cn/docs/api/concepts/)
 
 ### 2.插件
@@ -49,33 +49,28 @@
 ### 3.安装&&测试
 
 > 全局安装 gulp
-` npm install gulp -g`
-
+> ` npm install gulp -g`
 > 查看版本号
-`gulp -v`
+> `gulp -v`
 > CLI version: 2.2.0
 > Local version: 4.0.2
-
 > 创建项目
-`mkdir gulp && cd gulp `
-
+> `mkdir gulp && cd gulp `
 > 初始化项目
-`npm init -y`
-
+> `npm init -y`
 > 配置本地环境
-`npm install gulp --save-dev`
+> `npm install gulp --save-dev`
 
 > 创建 gulpfile.js文件
 
->```
-//本地引入
+```//本地引入
 const gulp = require('gulp');
 //gulp任务
->gulp.task('default', async () => {
+gulp.task('default', async () => {
   await console.log('hello gulp');
 });
 // hello gulp
->```
+```
 
 ### 4.项目配置
 * ####1.引入插件
