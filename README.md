@@ -48,20 +48,20 @@
 
 ### 3.安装&&测试
 
-> 全局安装 gulp
-> ` npm install gulp -g`
-> 查看版本号
+> * 全局安装 gulp
+>  ` npm install gulp -g`
+> *  查看版本号
 > `gulp -v`
 > CLI version: 2.2.0
 > Local version: 4.0.2
-> 创建项目
+> * 创建项目
 > `mkdir gulp && cd gulp `
-> 初始化项目
+> *  初始化项目
 > `npm init -y`
-> 配置本地环境
+> * 配置本地环境
 > `npm install gulp --save-dev`
 
-> 创建 gulpfile.js文件
+> * 创建 gulpfile.js文件
 
 ```//本地引入
 const gulp = require('gulp');
