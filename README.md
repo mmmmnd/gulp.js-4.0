@@ -61,9 +61,7 @@ Local version: 4.0.2
  * 配置本地环境
  `npm install gulp --save-dev`
 
-> * 创建 gulpfile.js文件
-
-> * 创建 gulpfile.js文件
+ * 创建 gulpfile.js文件
 
 ```//本地引入
 const gulp = require('gulp');
@@ -75,11 +73,11 @@ gulp.task('default', async () => {
 ```
 
 ### 4.项目配置
-* ####1.引入插件
+* #### 1.引入插件
 
     npm i  @babel/core gulp-watch autoprefixer del gulp gulp-babel gulp-clean-css gulp-concat gulp-connect gulp-eslint gulp-htmlmin gulp-if gulp-imagemin gulp-postcss gulp-rev gulp-rev-replace gulp-sass gulp-uglify gulp-useref postcss-px-to-viewport postcss-viewport-units --save-dev
 
-* ####2.新增.eslintrc.js文件
+* #### 2.新增.eslintrc.js文件
 ```
 module.exports = {
   "env": {
@@ -109,7 +107,7 @@ module.exports = {
   }
 };
 ```
-* ####3.设置文件路径
+* #### 3.设置文件路径
 ```
 const CSS = 'style.min.css';                        // 生成总css
 const JS = 'main.min.js';                           // 生成总js
@@ -159,7 +157,7 @@ const PROCESSORS = [PXTOVIEWPORT, AUTOPREFIXER, viewportUnits];
 ```
 
 ###  5.gulp
-* ####1. gulp方法
+* #### 1. gulp方法
 ```
 //图片压缩
 const imageMin = () => {
@@ -195,7 +193,7 @@ const htmlMin = () => {
 };
 ```
 
-* ####2. gulp dev开发方法
+* #### 2. gulp dev开发方法
 ```
 //dev任务，用于开发环境
 gulp.task('image:dev', async () => {
@@ -230,7 +228,7 @@ gulp.task('watch', () => {
   watch([PATH.HTML], gulp.series('html:dev'));
 });
 ```
-* ####3. gulp build压缩方法
+* #### 3. gulp build压缩方法
 ```
 //build任务，用于生产环境
 gulp.task('image:build', async () => {
@@ -271,7 +269,7 @@ gulp.task('upVersion', async () => {
 // build任务，用于生产环境下打包压缩源代码
 gulp.task('build', gulp.series('clean', gulp.parallel('image:build', 'css:build', 'js:build')))
 ```
-* ####4. package.json 配置
+* #### 4. package.json 配置
 ```
  "scripts": {
     "dev": "gulp dev",
