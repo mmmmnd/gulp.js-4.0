@@ -75,7 +75,7 @@ gulp.task('default', async () => {
 ### 4.项目配置
 * #### 1.引入插件
 
-    npm i  @babel/core gulp-watch autoprefixer del gulp gulp-babel gulp-clean-css gulp-concat gulp-connect gulp-eslint gulp-htmlmin gulp-if gulp-imagemin gulp-postcss gulp-rev gulp-rev-replace gulp-sass gulp-uglify gulp-useref postcss-px-to-viewport postcss-viewport-units --save-dev
+    ```npm i  @babel/core gulp-watch autoprefixer del gulp gulp-babel gulp-clean-css gulp-concat gulp-connect gulp-eslint gulp-htmlmin gulp-if gulp-imagemin gulp-postcss gulp-rev gulp-rev-replace gulp-sass gulp-uglify gulp-useref postcss-px-to-viewport postcss-viewport-units --save-dev```
 
 * #### 2.新增.eslintrc.js文件
 ```
@@ -131,27 +131,27 @@ const PATH = {
 const AUTOPREFIXER = autoprefixer({
   overrideBrowserslist: [
     "> 1%", "last 2 versions", "not ie <= 8"
-  ],                                                               // 浏览器兼容
-  cascade: false                                           // 是否美化属性值
+  ],                                                 // 浏览器兼容
+  cascade: false                                     // 是否美化属性值
 });
 const PXTOVIEWPORT = pxtoviewport({
-  viewportWidth: 1920,                                // 设计稿宽度
-  // viewportHeight: 1080,                          // 设计稿高度
-  viewportUnit: 'vw',                                    // px转vw
-  unitPrecision: 3,                                       // 指定`px`转换为视窗单位值的小数位数
-  minPixelValue: 1,                                     // 小于或等于`1px`不转换为视窗单位
-  selectorBlackList: ['.ignore', '.hairlines'],   // 指定不转换为视窗单位的类，可以自定义
-  mediaQuery: false                                   // 是否在媒体查询转换
+  viewportWidth: 1920,                               // 设计稿宽度
+  // viewportHeight: 1080,                           // 设计稿高度
+  viewportUnit: 'vw',                                // px转vw
+  unitPrecision: 3,                                  // 指定`px`转换为视窗单位值的小数位数
+  minPixelValue: 1,                                  // 小于或等于`1px`不转换为视窗单位
+  selectorBlackList: ['.ignore', '.hairlines'],      // 指定不转换为视窗单位的类，可以自定义
+  mediaQuery: false                                  // 是否在媒体查询转换
 });
 const HTML = {
-  removeComments: true,                           //清除HTML注释
-  collapseWhitespace: true,                        //压缩HTML
-  collapseBooleanAttributes: true,              //省略布尔属性的值 <input checked="true"/> ==> <input />
-  removeEmptyAttributes: true,                 //删除所有空格作属性值 <input id="" /> ==> <input />
-  removeScriptTypeAttributes: true,           //删除<script>的type="text/javascript"
-  removeStyleLinkTypeAttributes: true,      //删除<style>和<link>的type="text/css"
-  minifyJS: true,                                        //压缩页面JS
-  minifyCSS: true                                       //压缩页面CSS
+  removeComments: true,                               //清除HTML注释
+  collapseWhitespace: true,                           //压缩HTML
+  collapseBooleanAttributes: true,                    //省略布尔属性的值 <input checked="true"/> ==> <input />
+  removeEmptyAttributes: true,                        //删除所有空格作属性值 <input id="" /> ==> <input />
+  removeScriptTypeAttributes: true,                   //删除<script>的type="text/javascript"
+  removeStyleLinkTypeAttributes: true,                //删除<style>和<link>的type="text/css"
+  minifyJS: true,                                     //压缩页面JS
+  minifyCSS: true                                     //压缩页面CSS
 };
 const PROCESSORS = [PXTOVIEWPORT, AUTOPREFIXER, viewportUnits];
 ```
